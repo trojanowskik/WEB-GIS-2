@@ -5,25 +5,31 @@
 
 body{
     background: lightblue;
+    width: auto;
+    height: auto;
 }
 
-#container-left{
-    margin-left: 5%;
-    border: 1px solid black;
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "container-left container-right";
+  }
+  
+  .container-left { grid-area: container-left;
+     background: rgba(255,255,255,0.4);
+     margin-left: 5%;
+     border: 1px solid black;
+    }
+  
+  .container-right { grid-area: container-right;
     background: rgba(255,255,255,0.4);
-    width: 44%;    
-    height: 100%;
-    position:fixed;
-}
-
-#container-right{
     margin-right: 5%;
     border: 1px solid black;
     background: rgba(255,255,255,0.4);
-    margin-left: 50%;
-    width: 44%;
-    height: 100%;
-    position:fixed;
 }
 
 h1,h2{
@@ -39,9 +45,7 @@ li{
     font-size: larger;
 }
 
-#zdjecia{
-    margin-left: 5%;
-    width: 90%;
-    height: 100%;
-    overflow: scroll;
+#z1{
+    padding: 5%;
+    width: 750px;
 }
