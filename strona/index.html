@@ -4,66 +4,116 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=\, initial-scale=1.0">
-    <title>Największe miasta Polski</title>
+    <title>Miasta wojewódzkie</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="https://js.arcgis.com/4.22/esri/themes/light/main.css">
     <script src="https://js.arcgis.com/4.22/"></script>
-    <!--podpięcie api linijka 9 i 10-->
 </head>
 <body>
-    
-    <p id="witacz"></p>
 
-    <div class="container">
-
-        <div class="container-left">
-
-            <h1>Największe miasta w Polsce</h1>
+    <div class=pierwsza>
         
-            <p>Największe miasta w Polsce nie imponują tak bardzo, jak wielomilionowe metropolie azjatyckie, południowo- i północnoamerykańskie oraz zachodnioeuropejskie.
-                W naszych granicach mamy tylko jedno miasto, w którym liczba mieszkańców przekracza milion. Chyba dla nikogo nie jest tajemnicą, że mowa o Warszawie.
-                Co ciekawe, poza stolicą, tylko cztery polskie miasta przekraczają liczbę 500 tysięcy mieszkańców.
+        <h1>Miasta wojewódzkie w Polsce</h1>
+        
+        <img src=./img/panorama2.png>
+
+    </div>
+
+    <div class="mapa">
+
+        <div id="img1">
+            <img src=./img/warszawa.png>
+        </div>
+    
+        <div id="img1">
+            <img src=./img/krakow.png>
+        </div>
+    
+        <div id="img1">
+            <img src=./img/lodz.png>
+        </div>
+    
+        <div id="img1">
+            <img src=./img/wroclaw.png>
+        </div>
+    
+        <div id="img1">
+            <img src=./img/poznan.png>
+        </div>
+    
+        
+
+        <div id="map"></div>
+        <div id="topbar">
+            <button
+              class="action-button esri-icon-measure-line"
+              id="distanceButton"
+              type="button"
+              title="Pomiar odległości pomiędzy dwoma lub więcej puntkami"
+            ></button>
+            <button
+              class="action-button esri-icon-measure-area"
+              id="areaButton"
+              type="button"
+              title="Pomiar powierzchni"
+            ></button>
+          </div>
+
+    </div>
+        
+
+    <div class="text">
+
+        <div id="tekst">
+
+            <p>Podział kraju, wedle którego największą jednostką administracyjną jest województwo, obecny jest w Polsce od wielu stuleci. Terytoria te budowane były od zawsze wokół jednego, 
+                centralnego ośrodka miejskiego – stolicy. To tam koncentrowało się życie towarzyskie, polityczne, rozrywkowe i kulturalne całego regionu. Nie inaczej jest dziś.
+
+                Warto jednak zwrócić uwagę na inne oblicze miast wojewódzkich, a mianowicie ich walory turystyczne. Śmiało można zaryzykować stwierdzenie, że dziś wszystkie 18 stolic jest prawdziwymi 
+                perełkami dla osób, które hołdują zasadzie „cudze chwalicie, swego nie znacie”.
             </p>
         
-            <h2>Największe miasta w Polsce pod względem liczby mieszkańców</h2>
+            <h2>Miasta wojewódzkie w Polsce</h2>
         
             <ol>
-                <li>Warszawa - 1 793 579 mieszkańców</li>
-                <li>Kraków - 780 981 mieszkańców</li>
-                <li>Łódź - 677 286 mieszkańców</li>
-                <li>Wrocław - 643 782 mieszkańców</li>
-                <li>Poznań - 533 830 mieszkańców</li>
-                <li>Gdańsk - 471 525 mieszkańców</li>
-                <li>Szczecin - 400 990 mieszkańców</li>
-                <li>Bydgoszcz - 346 739 mieszkańców</li>
-                <li>Lublin - 339 547 mieszkańców</li>
-                <li>Białystok - 297 585 mieszkańców</li>
+                <li>Białystok</li>
+                <li>Bydgoszcz</li>
+                <li>Gdańsk</li>
+                <li>Gorzów Wielkopolski</li>
+                <li>Katowice</li>
+                <li>Kielce</li>
+                <li>Kraków</li>
+                <li>Lublin</li>
+                <li>Łódź</li>
+                <li>Olsztyn</li>
+                <li>Opole</li>
+                <li>Poznań</li>
+                <li>Rzeszów</li>
+                <li>Szczecin</li>
+                <li>Toruń</li>
+                <li>Warszawa</li>
+                <li>Wrocław</li>
+                <li>Zielona Góra</li>
             </ol>
 
-            <img src=./img/warszawa.jpg id=z1>
-            <img src=./img/krakow.jpg id=z1>
-            <img src=./img/lodz.jpg id=z1>
-            <img src=./img/wroclaw.jpg id=z1>
-            
-            
-
         </div>
-
-        <div class="container-right">
                 
+        <div id="stopka">
+            <hr>
+            <p>Strona wykonana na potrzeby przedmiotu WEB-GIS 2.
+                <br>
+                &copy; Karol Trojanowski
+                <br>
+                email: example@wp.pl
+                <br>
+                telefon: 123456789
+            </p>
         </div>
-        
-    </div>
 
-    <div id="mapa">
-        
     </div>
-
     
-
 </body>
 
 <script src="script/skrypt1.js" defer></script>
-<!--skrypt może też być podpięty tutaj-->
 
 </html>

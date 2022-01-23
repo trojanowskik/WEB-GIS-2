@@ -1,55 +1,122 @@
-#witacz{
-    font-size: 30px;
-    text-align: center;
+body, html{
+    width: 100%;
+    height: 100%;
+    margin: 0%;
+    padding: 0%;
+    background: #edeada;
 }
 
-body{
-    background: lightblue;
-    width: auto;
-    height: auto;
-}
-
-.container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "container-left container-right";
-  }
-  
-  .container-left { grid-area: container-left;
-     background: rgba(255,255,255,0.4);
-     margin-left: 5%;
-     border: 1px solid black;
-    }
-  
-  .container-right { grid-area: container-right;
-    background: rgba(255,255,255,0.4);
-    margin-right: 5%;
-    border: 1px solid black;
-    }
-
-h1,h2{
-    text-align: center;
-}
-
-p{
-    text-align: center;
-    font-size: larger;
-}
-
-li{
-    font-size: larger;
-}
-
-#z1{
-    padding: 5%;
-    width: 750px;
-}
-
-#mapa{
+.pierwsza{
+    margin: 0%;
+    padding: 0%;
     width: 100%;
     height: 100%;
 }
+
+.pierwsza h1{
+    margin: 0%;
+    padding: 0%;
+    height: 10%;
+    width: 100%;
+    text-align: center;
+}
+
+.pierwsza img{
+    margin: 0%;
+    padding: 0%;
+    height: 90%;
+    width: 100%;
+}
+
+.mapa{
+    margin: 0%;
+    padding: 0%;
+    height: 100%;
+    width: 100%;
+}
+
+.mapa #img1{
+    float:left;
+    margin: 0%;
+    padding: 0%;
+    width: 20%;
+    height: 20%;
+}
+
+.mapa div img{
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+.mapa #map{
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    height: 80%;
+}
+
+.text{
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+.text #tekst{
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    height: 80%;
+}
+
+.text #stopka{
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    height: 20%;
+}
+
+#map {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  #topbar {
+    background: #fff;
+    padding: 10px;
+  }
+
+  .action-button {
+    font-size: 16px;
+    background-color: transparent;
+    border: 1px solid #d3d3d3;
+    color: #6e6e6e;
+    height: 32px;
+    width: 32px;
+    text-align: center;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+  }
+
+  .action-button:hover,
+  .action-button:focus {
+    background: #0079c1;
+    color: #e4e4e4;
+  }
+
+  .active {
+    background: #0079c1;
+    color: #e4e4e4;
+  }
+
+  p, h2, ol, li{
+      text-align: center;
+      list-style-type: none;
+  }
+
+  hr{
+      border-top: 1px solid black;
+  }
