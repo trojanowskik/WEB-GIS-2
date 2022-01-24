@@ -128,72 +128,23 @@ require([
     position: "top-left"
   });
   
-  view.ui.add("topbar", "top-right");
+  const measurementWg = new AreaMeasurement2D({
+    view: view
+  });
+  const distanceWg = new DistanceMeasurement2D({
+      view: view
+  });
 
-  document
-    .getElementById("distanceButton")
-    .addEventListener("click", function () {
-      setActiveWidget(null);
-      if (!this.classList.contains("active")) {
-        setActiveWidget("distance");
-      } else {
-        setActiveButton(null);
-      }
-    });
+  const exp2 = new Expand({
+    view: view,
+    content: distanceWg
+  });
+  const exp3 = new Expand({
+    view: view,
+    content: measurementWg
+  });
 
-  document
-    .getElementById("areaButton")
-    .addEventListener("click", function () {
-      setActiveWidget(null);
-      if (!this.classList.contains("active")) {
-        setActiveWidget("area");
-      } else {
-        setActiveButton(null);
-      }
-    });
+  view.ui.add(exp2, {position: "top-right"});
+  view.ui.add(exp3, {position: "top-right"});
 
-function setActiveWidget(type) {
-  switch (type) {
-    case "distance":
-      activeWidget = new DistanceMeasurement2D({
-        view: view
-      });
-
-      activeWidget.viewModel.start();
-
-      view.ui.add(activeWidget, "top-right");
-      setActiveButton(document.getElementById("distanceButton"));
-      break;
-
-    case "area":
-      activeWidget = new AreaMeasurement2D({
-        view: view
-      });
-
-      activeWidget.viewModel.start();
-
-      view.ui.add(activeWidget, "top-right");
-      setActiveButton(document.getElementById("areaButton"));
-      break;
-
-    case null:
-      if (activeWidget) {
-        view.ui.remove(activeWidget);
-        activeWidget.destroy();
-        activeWidget = null;
-      }
-      break;
-  }
-}
-
-function setActiveButton(selectedButton) {
-  view.focus();
-  let elements = document.getElementsByClassName("active");
-  for (let i = 0; i < elements.length; i++) {
-    elements[i].classList.remove("active");
-  }
-  if (selectedButton) {
-    selectedButton.classList.add("active");
-  }
-}
 });
