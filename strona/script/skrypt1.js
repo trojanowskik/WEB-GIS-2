@@ -147,4 +147,39 @@ require([
   view.ui.add(exp2, {position: "top-right"});
   view.ui.add(exp3, {position: "top-right"});
 
+  let btnZoom1 = document.getElementById('btn1');
+  let btnZoom2 = document.getElementById('btn2');
+
+  btnZoom1.addEventListener('click', function(){
+
+    /*view.center = [21.050202, 52.236639];
+    view.zoom = 11;*/
+
+    let opts = {
+      duration: 2000
+  };
+
+  view.goTo({
+      target: [21.050202, 52.236639],
+      zoom: 11
+    }, opts);
+  
+  });
+
+  btnZoom2.addEventListener('click', function(){
+
+    /*view.center = [21.050202, 52.236639];
+    view.zoom = 11;*/
+
+    let opts = {
+      duration: 2000
+  };
+
+  view.goTo({
+      target: [19.939640, 50.057767],
+      zoom: 11
+    }, opts);
+  
+  });
+
 });
