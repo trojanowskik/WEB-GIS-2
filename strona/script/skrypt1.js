@@ -149,11 +149,11 @@ require([
 
   let btnZoom1 = document.getElementById('btn1');
   let btnZoom2 = document.getElementById('btn2');
+  let btnZoom3 = document.getElementById('btn3');
+  let btnZoom4 = document.getElementById('btn4');
+  let btnZoom5 = document.getElementById('btn5');
 
   btnZoom1.addEventListener('click', function(){
-
-    /*view.center = [21.050202, 52.236639];
-    view.zoom = 11;*/
 
     let opts = {
       duration: 2000
@@ -168,15 +168,51 @@ require([
 
   btnZoom2.addEventListener('click', function(){
 
-    /*view.center = [21.050202, 52.236639];
-    view.zoom = 11;*/
-
     let opts = {
       duration: 2000
   };
 
   view.goTo({
       target: [19.939640, 50.057767],
+      zoom: 11
+    }, opts);
+  
+  });
+
+  btnZoom3.addEventListener('click', function(){
+
+    let opts = {
+      duration: 2000
+  };
+
+  view.goTo({
+      target: [19.453812, 51.756736],
+      zoom: 11
+    }, opts);
+  
+  });
+
+  btnZoom4.addEventListener('click', function(){
+
+    let opts = {
+      duration: 2000
+  };
+
+  view.goTo({
+      target: [17.033061, 51.108738],
+      zoom: 11
+    }, opts);
+  
+  });
+
+  btnZoom5.addEventListener('click', function(){
+
+    let opts = {
+      duration: 2000
+  };
+
+  view.goTo({
+      target: [16.918139, 52.401702],
       zoom: 11
     }, opts);
   
