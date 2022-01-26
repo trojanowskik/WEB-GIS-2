@@ -107,7 +107,7 @@ require([
 
   view.ui.add(layerlist, "bottom-left")
 
-  const searchWidget = new Search({
+  /*const searchWg = new Search({
     view: view,
     allPlaceholder: "Nazwa miasta",
     includeDefaultSources: false,
@@ -122,31 +122,39 @@ require([
       zoomScale: 100000,
       resultSymbol: template
     }]
+  });*/
+
+  const searchWg = new Search({
+    view: view
   });
 
-  view.ui.add(searchWidget, {
-    position: "top-left"
+  const expSearch = new Expand({
+    view: view,
+    content: searchWg
   });
+
+  view.ui.add(expSearch, {position: "top-right"});
   
-  const measurementWg = new AreaMeasurement2D({
+  const areaWg = new AreaMeasurement2D({
     view: view
   });
   const distanceWg = new DistanceMeasurement2D({
       view: view
   });
 
-  const exp2 = new Expand({
+  const expArea = new Expand({
+    view: view,
+    content: areaWg
+  });
+
+  const expDistance = new Expand({
     view: view,
     content: distanceWg
   });
-  const exp3 = new Expand({
-    view: view,
-    content: measurementWg
-  });
-
-  view.ui.add(exp2, {position: "top-right"});
-  view.ui.add(exp3, {position: "top-right"});
-
+  
+  view.ui.add(expArea, {position: "top-right"});
+  view.ui.add(expDistance, {position: "top-right"});
+  
   let btnZoom1 = document.getElementById('btn1');
   let btnZoom2 = document.getElementById('btn2');
   let btnZoom3 = document.getElementById('btn3');
