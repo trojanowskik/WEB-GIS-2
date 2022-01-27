@@ -128,12 +128,7 @@ require([
     view: view
   });
 
-  const expSearch = new Expand({
-    view: view,
-    content: searchWg
-  });
-
-  view.ui.add(expSearch, {position: "top-right"});
+  view.ui.add(searchWg, {position: "top-left"});
   
   const areaWg = new AreaMeasurement2D({
     view: view

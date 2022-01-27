@@ -43,7 +43,7 @@ body, html{
     height: 20%;
 }
 
-.mapa button{
+.mapa #img1 button{
     width: 100%;
     height: 100%;
 }
@@ -90,22 +90,7 @@ body, html{
     width: 100%;
   }
 
-  @mixin expandPanelClosed($modeClass) {
-    .#{$modeClass} {
-      .esri-expandcontent {
-        position: absolute;
-      }
-  
-      .esri-expandmask,
-      .esri-expand__content-panel {
-        display: none;
-      }
-    }
-  }
-  
-  @if $include_Expand==true {
-    @include expand();
-  }
+
 
   p, h2, ol, li{
       text-align: center;
